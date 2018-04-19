@@ -5,6 +5,13 @@
         "declarationDir": ".",
         "module": "esnext",
         "moduleResolution": "node",
-        "target": "esnext"
-    }
+        "target": "es6",
+        "experimentalDecorators": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
