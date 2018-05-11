@@ -13,7 +13,10 @@ const options = {
 console.log(`Building for production:${options.isProduction} test:${options.isTest}`);
 
 module.exports = {
-    entry: (options.isTest) ? { "test": "./src/test/tests.ts" } : { "index": "./src/index.ts" },
+    entry: {
+        index: "./src/index.ts",
+        test: "./src/test/tests.ts",
+    },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
