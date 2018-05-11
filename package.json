@@ -43,9 +43,9 @@
         "debug": "node_modules/.bin/mocha -R spec ./lib/test.js --inspect-brk=[::]:9229",
         "predev": "npm install",
         "dev": "npm run-script watch-dev",
-        "watch-dev": "NODE_ENV=development BUILD_TYPE=test node_modules/.bin/webpack --mode development --watch",
-        "build": "NODE_ENV=production webpack --mode production",
-        "build-test": "NODE_ENV=production BUILD_TYPE=test webpack --display=errors-only --mode production",
+        "watch-dev": "BUILD_TYPE=test node_modules/.bin/webpack --mode development --watch",
+        "build": "webpack --mode production",
+        "build-test": "BUILD_TYPE=test webpack --display=errors-only --mode production",
         "prepublishOnly": "npm install && npm run-script build && npm run-script build-test && npm test"
     }
 }
